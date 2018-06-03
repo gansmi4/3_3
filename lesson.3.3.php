@@ -8,6 +8,7 @@ spl_autoload_register(
 		    }
 	  }
 );
+
 // Класс Автомобиль
 echo '<h4>Автомобиль</h4>';
 $vaz = new Products\Category\Car('автомобиль', 50000);
@@ -23,6 +24,7 @@ echo '<br/>';
 $niva->printFullDescription();
 echo '<br/>';
 echo '<br/>';
+
 // Класс Телевизор
 echo '<h4>Телевизор</h4>';
 $samsung = new Products\Category\TV('телевизор', 32750);
@@ -38,6 +40,7 @@ echo '<br/>';
 $lg->printFullDescription();
 echo '<br/>';
 echo '<br/>';
+
 // Класс Шариковая ручка
 echo '<h4>Шариковая ручка</h4>';
 $montblanc = new Products\Category\Pen('шариковая ручка', 3499);
@@ -51,6 +54,7 @@ echo '<br/>';
 $giorgiofedon->printFullDescription();
 echo '<br/>';
 echo '<br/>';
+
 // Класс Утка
 echo '<h4>Утка</h4>';
 $duckRassia = new Products\Category\Duck('утка', '2500');
@@ -69,6 +73,7 @@ echo '<br/>';
 echo 'Количество созданных объектов: '.Products\Product::$staticProperty;
 echo '<br/>';
 echo '<br/>';
+
 // Корзина
 $basket = new Products\Basket();
 $basket[] = $vaz;
@@ -77,6 +82,8 @@ $basket[] = $samsung;
 $basket[] = $montblanc;
 $basket['утка'] = $duckRassia;
 echo "<h2>В корзине товаров на общую сумму: {$basket->getPriceProductsBasket()} руб.</h2>";
+
 // Заказ
 $order = new Products\Order($basket);
 $order->getInfoOrder();
+?>
