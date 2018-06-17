@@ -1,5 +1,6 @@
 <?php
-namespace Products;
-class MyException extends \Exception
-{
-}
+    namespace Products;
+    class MyException extends \Exception
+    {
+    }
+?>

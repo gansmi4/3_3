@@ -1,12 +1,12 @@
 <?php
-namespace Products;
-class Basket  implements \ArrayAccess
-{
-	  public $container = [];
+    namespace Products;
+    class Basket  implements \ArrayAccess
+    {
+	    public $container = [];
 		public function offsetSet($index, $product)
 		{
-				try {
-            if (empty($product->getPrice())) {
+		    try {
+                if (empty($product->getPrice())) {
 					      throw new MyException('<b>Ошибка!</b> ');
 				    }
             if (is_null($index)) {
@@ -39,4 +39,5 @@ class Basket  implements \ArrayAccess
 				}
 				return $totalPrice;
 		}
-}
+	}
+?>
